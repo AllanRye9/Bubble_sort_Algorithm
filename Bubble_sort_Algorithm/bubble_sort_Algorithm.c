@@ -27,18 +27,18 @@ int *bubble_sort(int *a, int size)
     return (a);
 }
 
-int main(int argc, char *argv[])
+int main(int ac, char *av[])
 {
     int i = 0;
-    int size = argc - 1;
+    int size = ac - 1;
     int *arr = malloc(sizeof(int) * size);
     char buf[size];
 
-    if (argc > 1)
+    if (ac > 1)
     {
-        while (i < argc)
+        while (i < ac)
         {
-            arr[i - 1] = ft_atoi(argv[i]);
+            arr[i - 1] = ft_atoi(av[i]);
             i++;
         }
         arr = bubble_sort(arr, size);
